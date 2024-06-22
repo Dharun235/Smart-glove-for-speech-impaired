@@ -12,9 +12,9 @@
 4. ML algorithms embedded to increase the accuracy from 79% to 91%
 
 ## References 
-1. [Report submitted for Final year project - ](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/Final%20Report.pdf)
-2. [Image of signs - ](https://github.com/Dharun235/Smart-glove-for-speech-impaired/tree/main/Image%20of%20signs)
-3. [Dataset analysis and ML application on the dataset - ](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/ml_analysis_on_dataset.ipynb)
+1. [Report submitted for Final year project ](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/Final%20Report.pdf)
+2. [Image of signs](https://github.com/Dharun235/Smart-glove-for-speech-impaired/tree/main/Image%20of%20signs)
+3. [Dataset analysis and ML application on the dataset](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/ml_analysis_on_dataset.ipynb)
 4. [Code for quickly finding which ML models to use among many of the ML models using LAZY PREDICT library](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/lazy-predict.py)
 
 ## Codes
