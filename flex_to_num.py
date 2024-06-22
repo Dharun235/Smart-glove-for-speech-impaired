@@ -1,9 +1,9 @@
 import joblib
 
-# Load the saved models
+# Load the saved model
 model = joblib.load("enter the path") # Extra trees classifier
 
 # Flex sensor values to decimal number convertor
-def flex_to_num(int_data):
-    prediction = model.predict(input_data)        
+def flex_to_num(data):
+    prediction = model.predict(data)        
     return prediction
