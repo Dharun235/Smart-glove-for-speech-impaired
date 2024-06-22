@@ -18,7 +18,7 @@ arduinoData2=serial.Serial('COM5',9600)
 while True:
     arduinoData2.write("Start or stop")
     print("Enter 16 to start or 0 to stop: ")
-    start_input = read_from_arduino('COM6',1)
+    start_input = read_from_arduino('COM6')
 
     if start_input == 0:
         arduinoData2.write("Stopped.")
@@ -34,7 +34,7 @@ while True:
             time.sleep(1)
             arduinoData2.write("Enter the mode")
             print("Enter 9 for Mode1  /n 13 for Mode2  /n 15 for Mode3 /n type '0' to stop: ")
-            index =  read_from_arduino('COM6',2)     
+            index =  read_from_arduino('COM6')     
             
             if index == 0:
                 arduinoData2.write("Stopped.")
@@ -49,7 +49,7 @@ while True:
                     time.sleep(1)
                     arduinoData2.write("Enter the value")
                     print("Enter the number for retrieving string, from 1 to 32: ")
-                    index = read_from_arduino('COM6',3)
+                    index = read_from_arduino('COM6')
                     if index == 13 or index == 15:
                         arduinoData2.write("Exit - Mode1")
                         print("Exit from mode 1")
@@ -70,7 +70,7 @@ while True:
                     time.sleep(1)
                     arduinoData2.write("Enter the value")
                     print("Enter the number for retrieving string, from 1 to 32: ")
-                    index = read_from_arduino('COM6',3)
+                    index = read_from_arduino('COM6')
                     if index == 9 or index == 15:
                         arduinoData2.write("Exit - Mode 2")
                         print("Exit from mode 2")
@@ -91,7 +91,7 @@ while True:
                     time.sleep(1)
                     arduinoData2.write("Enter the value")
                     print("Enter the number for retrieving string, from 1 to 32: ")
-                    index = read_from_arduino('COM6',3)
+                    index = read_from_arduino('COM6')
                     if index == 13 or index == 9:
                         arduinoData2.write("Exit - mode 3")
                         print("Exit from mode 3")
