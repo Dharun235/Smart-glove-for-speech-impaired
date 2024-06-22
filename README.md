@@ -24,3 +24,9 @@
 3. [Read data from arduino](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/read_from_arduino.py)
 4. [Flex sensor ADC value to decimal number convertor](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/flex_to_num.py)
 5. [Main loop](https://github.com/Dharun235/Smart-glove-for-speech-impaired/blob/main/Main%20loop.py)
+
+## Files that can be given only after request for duplication or advancement of the project
+1. Dataset file for training and testing ML models
+2. Models file
+
+# Thank you for reading till here
