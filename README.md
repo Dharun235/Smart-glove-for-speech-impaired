@@ -28,4 +28,3 @@
 1. Dataset file for training and testing ML models
 2. Models file
 
-# Thank you for reading till here
