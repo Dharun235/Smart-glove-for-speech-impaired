@@ -39,7 +39,7 @@ Start, stop, and mode-selection gestures are part of the control flow.
 ├── lazy-predict.py                # Optional model-baseline comparison
 ├── Image of signs/                # Reference images for encoded gestures
 ├── requirements.txt               # Python dependencies
-├── CODE_GUIDELINES.md             # Contribution and attribution rules
+├── CODE_GUIDELINES.md             # Maintenance and attribution rules
 ├── CITATION.cff                   # Citation metadata
 └── LICENSE                        # MIT code license and attribution notice
 ```
@@ -124,3 +124,5 @@ Please cite the published paper, thesis report, dataset, and this repository whe
 ## License
 
 Source code is released under the [MIT License](LICENSE). The license does not replace attribution: cite the published work and report, and follow the separate CC BY 4.0 terms for the dataset. Unpublished research results and future manuscripts are not licensed by this repository.
+
+This is a reference release for the thesis work, not a community-maintained project. No external contribution workflow is provided; contact the author before proposing changes or reuse of unpublished extensions.

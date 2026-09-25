@@ -1,4 +1,8 @@
-# Code guidelines
+# Code and maintenance guidelines
+
+This repository is a reference release of thesis work. These notes document
+maintenance expectations; they do not establish an external contribution
+program.
 
 - Keep hardware communication, inference, and analysis responsibilities separate.
 - Use repository-relative paths or explicit CLI arguments; do not commit local drive paths, credentials, datasets, or model binaries.
