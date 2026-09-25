@@ -1,32 +1,36 @@
+"""Compare baseline classifiers for a prepared five-sensor Excel dataset."""
+
+import argparse
+
+import pandas as pd
 from lazypredict.Supervised import LazyClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-import pandas as pd
 
-# Replace 'your_encoded_data_file.xlsx' with the actual file path
-encoded_data_file_path = 'concatenated_data1.xlsx'  # Replace with your actual file path
 
-# Read the Excel file into a DataFrame
-df = pd.read_excel(encoded_data_file_path)
+def main() -> None:
+    """Load data, train LazyPredict baselines, and print the score table."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("dataset", help="Excel file with five sensor columns and a label column")
+    parser.add_argument("--label-column", default="label")
+    args = parser.parse_args()
 
-# Features (finger positions)
-X = df.iloc[:, :5]
+    dataframe = pd.read_excel(args.dataset)
+    features = dataframe.iloc[:, :5]
+    if args.label_column not in dataframe:
+        raise ValueError(f"Missing label column: {args.label_column}")
+    target = dataframe[args.label_column]
+    x_train, x_test, y_train, y_test = train_test_split(
+        features, target, test_size=0.2, random_state=42, stratify=target
+    )
 
-# Target variable (single column with binary numbers representing classes)
-y = df['label']  # Replace 'your_target_column_name' with the actual column name
+    scaler = StandardScaler()
+    x_train = scaler.fit_transform(x_train)
+    x_test = scaler.transform(x_test)
+    classifier = LazyClassifier(ignore_warnings=True, custom_metric=None)
+    models, _ = classifier.fit(x_train, x_test, y_train, y_test)
+    print(models)
 
-# Split the data into training and testing sets (70% train, 30% test)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Use StandardScaler for normalization
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
-
-# Use Lazy Predict to automatically select and evaluate models
-clf = LazyClassifier(ignore_warnings=True, custom_metric=None)
-models, predictions = clf.fit(X_train_scaled, X_test_scaled, y_train, y_test)
-
-# Display the model performance summary
-print(models)
-
+if __name__ == "__main__":
+    main()

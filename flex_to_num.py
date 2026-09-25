@@ -22,4 +22,8 @@ def flex_to_num(data, model=None, model_path: str | os.PathLike[str] | None = No
     """Predict one gesture from five sensor values and return its class label."""
     classifier = model if model is not None else load_model(model_path)
     features = np.asarray(data, dtype=float).reshape(1, -1)
+    if features.shape[1] != 5:
+        raise ValueError(f"Expected five sensor values; received {features.shape[1]}.")
+    if not np.isfinite(features).all():
+        raise ValueError("Sensor values must be finite numbers.")
     return classifier.predict(features)[0]

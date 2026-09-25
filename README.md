@@ -67,7 +67,7 @@ Trained model artifacts are kept outside this Git repository because of their si
 
 Models: [Google Drive model folder](https://drive.google.com/drive/u/4/folders/1gMEkVF_XD0_TCsYsYKikhC4BGvrp9c4A).
 
-The repository currently performs inference in Python. The models are **not yet deployed to the Arduino**. Embedded deployment is a planned next step requiring a model compatible with the target board, conversion/quantization, memory and latency checks, and an on-device inference path.
+The repository currently performs inference in Python. The models are **not yet deployed to the Arduino**. Embedded deployment remains future work: select a board-compatible model, convert or quantize it, verify memory and latency, and implement on-device inference.
 
 ## Results reported in the thesis
 
@@ -116,9 +116,9 @@ The existing scripts still require local serial-port configuration. Replace the 
 
 ## Reproducing the analysis
 
-`ml_analysis_on_dataset.ipynb` is a Colab-oriented notebook. It explores the sensor data, class distribution, correlations, feature importance, clustering, PCA/t-SNE, neural-network training, classical classifiers, and serialized model artifacts. Update its Google Drive paths before running cells.
+`ml_analysis_on_dataset.ipynb` is a local, configurable notebook. It validates the five sensor columns, explores class distribution/correlation/clusters/PCA, evaluates classical classifiers, and saves models with their fitted `MinMaxScaler` in a local `models/` directory. Set `DATASET_PATH` before running it. Its metrics are new runs and should not be treated as the thesis table above.
 
-`lazy-predict.py` is an optional baseline script. It expects an Excel file with five sensor columns followed by a `label` column and uses `LazyClassifier` to compare candidate classifiers.
+`lazy-predict.py` is an optional baseline script. Run `python lazy-predict.py path/to/data.xlsx`; it expects five sensor columns followed by a `label` column and uses `LazyClassifier` for comparison.
 
 ## Citation
 

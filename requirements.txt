@@ -5,3 +5,5 @@ openpyxl
 pyserial
 scikit-learn
 lazypredict
+matplotlib
+seaborn
