@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "SHWASI Smart Glove"
+message: "Please cite the IEEE paper, thesis report, dataset, and this repository when using this work."
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Dharun
+repository-code: "https://github.com/Dharun235/Smart-glove-for-speech-impaired"
+url: "https://github.com/Dharun235/dharun.github.io/blob/main/B.TechDissertationReport.pdf"
+identifiers:
+  - type: doi
+    value: "10.1109/INDICON63790.2024.10958541"
+    description: "Published SHWASI paper"

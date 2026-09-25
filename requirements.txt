@@ -1,0 +1,7 @@
+numpy
+joblib
+pandas
+openpyxl
+pyserial
+scikit-learn
+lazypredict
