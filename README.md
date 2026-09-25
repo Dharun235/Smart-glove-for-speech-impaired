@@ -63,6 +63,22 @@ Models: [Google Drive model folder](https://drive.google.com/drive/u/4/folders/1
 
 The repository currently performs inference in Python. The models are **not yet deployed to the Arduino**. Embedded deployment is a planned next step requiring a model compatible with the target board, conversion/quantization, memory and latency checks, and an on-device inference path.
 
+## Results reported in the thesis
+
+The thesis reports data collection from 100 volunteers: 160,000 raw sensor datapoints across three modes and 32 gesture combinations per mode. The public Hugging Face release currently lists 96 Excel files; use its dataset card as the source of truth for the released files.
+
+Reported classifier results:
+
+| Model | Accuracy | F1 | Memory | Inference |
+| --- | ---: | ---: | ---: | ---: |
+| KNN | 81.30% | 81.32% | 2.21 MB | 1.16 ms |
+| Decision tree | 80.60% | 80.60% | 3.57 MB | 0.08 ms |
+| Random forest | 90.17% | 90.17% | 669.80 MB | 11.30 ms |
+| Extra Trees | **91.05%** | **91.05%** | 1100.00 MB | 11.95 ms |
+| Bagging | 89.40% | 89.40% | 582.71 MB | 22.54 ms |
+
+The report also compares 79% accuracy for the rule-based system with 91% for the machine-learning system. These figures are reported thesis results, not a new reproduction in this repository.
+
 ## Setup
 
 ```bash
