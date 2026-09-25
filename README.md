@@ -46,7 +46,13 @@ Start, stop, and mode-selection gestures are part of the control flow.
 
 ## Dataset
 
-The associated [Fingerspelling Dataset](https://huggingface.co/datasets/Dharunkumar9/Fingerspelling_dataset) contains Excel recordings from five flex sensors. Its dataset card currently describes 96 files organized as 32 entries for each of the three modes, with `thumb`, `index`, `middle`, `ring`, and `little` sensor channels. The dataset is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); follow its attribution terms.
+The associated [Fingerspelling Dataset](https://huggingface.co/datasets/Dharunkumar9/Fingerspelling_dataset) contains Excel recordings from five flex sensors. Its dataset card currently describes 96 `.xlsx` files:
+
+- `MODE 1/` — 32 phrase classes;
+- `MODE 2/` — 32 alphabet classes;
+- `MODE 3/` — 32 number/symbol classes.
+
+Each file represents one encoded class. Filenames carry the mode, binary class code, and label, for example `Mode 1 - 00001 - Good Morning.xlsx`. Sensor channels are `thumb`, `index`, `middle`, `ring`, and `little`. The files can be loaded with `pandas.read_excel`; the Hugging Face viewer does not preview them as CSV data. The dataset is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); follow its attribution terms.
 
 ## Models
 
