@@ -98,17 +98,9 @@ The existing scripts still require local serial-port configuration. Replace the 
 
 `lazy-predict.py` is an optional baseline script. It expects an Excel file with five sensor columns followed by a `label` column and uses `LazyClassifier` to compare candidate classifiers.
 
-## Limitations
-
-- The trained artifacts are external to this repository.
-- The current Python classifier path is not an Arduino deployment.
-- Hardware serial ports and Bluetooth wiring are environment-specific.
-- The dataset and report describe the experiment; they are not a substitute for hardware validation.
-- The follow-up machine-learning publication is not yet available; cite the published IEEE paper and thesis report when discussing the project.
-
 ## Citation
 
-Please cite the published paper, thesis report, dataset, and this repository when using the work. Do not present the prototype, dataset, or unpublished extension as independent work.
+For academic or public use, cite the published paper, thesis report, dataset, and this repository. Do not present the prototype or unpublished extension as independent work.
 
 ```bibtex
 @inproceedings{10958541,
@@ -123,6 +115,4 @@ Please cite the published paper, thesis report, dataset, and this repository whe
 
 ## License
 
-Source code is released under the [MIT License](LICENSE). The license does not replace attribution: cite the published work and report, and follow the separate CC BY 4.0 terms for the dataset. Unpublished research results and future manuscripts are not licensed by this repository.
-
-This is a reference release for the thesis work, not a community-maintained project. No external contribution workflow is provided; contact the author before proposing changes or reuse of unpublished extensions.
+Source code is released under the [MIT License](LICENSE). The dataset has separate [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) terms. This repository is a reference release; it has no external contribution workflow.
