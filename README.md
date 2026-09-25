@@ -1,5 +1,7 @@
 # SHWASI smart glove
 
+<img src="Image%20of%20signs/00000.jpeg" alt="SHWASI smart glove with flex sensors" width="420">
+
 An Arduino-based assistive communication prototype using five flex sensors to recognize predefined finger-spelling gestures and send text/audio-oriented outputs through a connected application.
 
 This repository contains the bachelor’s-thesis prototype, sensor-data collection code, exploratory machine-learning notebook, and Python-side inference utilities.
